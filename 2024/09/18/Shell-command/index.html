@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        leejieun
+    </title>
+    <meta name="description" content= 嘿，这里是leejieun～这是我的博客。欢迎访问！ >
+    <meta name="keywords" content= Blog,Hexo,Theme,leejieun >
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            Shell command
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <ul>
+<li>Shell命令<ul>
+<li>Linux结构<ul>
+<li>kernel<ul>
+<li>管理计算机的硬件资源</li>
+<li>为上层应用程序提供运行环境</li>
+</ul>
+</li>
+<li>系统调用<ul>
+<li>内核给上层应用程序提供的接口</li>
+</ul>
+</li>
+<li>库函数<ul>
+<li>系统调用的封装<ul>
+<li>方便使用</li>
+<li>增加代码的可移植性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>shell<ul>
+<li>命令解释器<ul>
+<li>命令：一般来说，命令就是可执行程序</li>
+<li>脚本 (script)：命令的集合</li>
+<li>具体的shell<ul>
+<li>sh</li>
+<li>csh</li>
+<li>bash</li>
+<li>ksh</li>
+<li>zsh</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户子系统相关命令<ul>
+<li>查看所有用户<ul>
+<li>cat &#x2F;etc&#x2F;passwd</li>
+<li>man 5 passwd</li>
+</ul>
+</li>
+<li>添加用户<ul>
+<li>useradd<ul>
+<li>-m</li>
+<li>-s &#x2F;bin&#x2F;bash</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除用户<ul>
+<li>userdel<ul>
+<li>-r</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改密码<ul>
+<li>passwd</li>
+</ul>
+</li>
+<li>切换用户<ul>
+<li>su</li>
+</ul>
+</li>
+<li>退出切换<ul>
+<li>exit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>文件<ul>
+<li>目录<ul>
+<li>常见的目录<ul>
+<li>&#x2F;</li>
+<li>&#x2F;bin</li>
+<li>&#x2F;lib</li>
+<li>&#x2F;proc</li>
+<li>&#x2F;dev</li>
+<li>&#x2F;var</li>
+<li>&#x2F;etc</li>
+<li>&#x2F;root</li>
+<li>&#x2F;home&#x2F;{username}</li>
+</ul>
+</li>
+<li>打印当前工作目录<ul>
+<li>pwd</li>
+</ul>
+</li>
+<li>切换当前工作目录<ul>
+<li>cd<ul>
+<li>cd</li>
+<li>cd ~</li>
+<li>cd .</li>
+<li>cd ..</li>
+<li>cd -<ul>
+<li>上一次目录保存到 OLDPWD 环境变量中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>创建目录<ul>
+<li>mkdir<ul>
+<li>-p<ul>
+<li>mkdir -p a&#x2F;b&#x2F;c</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除空目录<ul>
+<li>rmdir<ul>
+<li>-p<ul>
+<li>rmdir -p a&#x2F;b&#x2F;c</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>显示目录项<ul>
+<li>ls<ul>
+<li>常用选项<ul>
+<li>-a</li>
+<li>-i</li>
+<li>-l<ul>
+<li>第一个字段<ul>
+<li>第一个字符<ul>
+<li>文件类型<ul>
+<li>-：普通文件</li>
+<li>d</li>
+<li>c</li>
+<li>b</li>
+<li>l</li>
+<li>p</li>
+<li>s</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其它九个字符<ul>
+<li>权限<ul>
+<li>拥有者</li>
+<li>所属组</li>
+<li>其他人</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>硬链接数</li>
+<li>拥有者</li>
+<li>所属组</li>
+<li>大小</li>
+<li>最近修改时间</li>
+<li>文件名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>tree</li>
+</ul>
+</li>
+<li>复制<ul>
+<li>cp<ul>
+<li>格式<ul>
+<li>cp SOURCE  DEST</li>
+<li>cp -r SOURCE DEST</li>
+<li>cp SOURCE…  DEST(已存在的目录)</li>
+</ul>
+</li>
+<li>常用选项<ul>
+<li>-r</li>
+<li>-n</li>
+<li>-i</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>移动<ul>
+<li>mv<ul>
+<li>格式<ul>
+<li>mv SOURCE DEST  (重命名)</li>
+<li>mv SOURCE… DEST (已存在的目录，移动)</li>
+</ul>
+</li>
+<li>常用选项<ul>
+<li>-n</li>
+<li>-i</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除文件或文件夹<ul>
+<li>rm<ul>
+<li>常用选项<ul>
+<li>-r</li>
+<li>-i</li>
+<li>-f: 永远不提示</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>普通文件<ul>
+<li>创建文件<ul>
+<li>touch  a.txt</li>
+<li>echo  “Hello world” &gt; a.txt</li>
+<li>vim a.txt</li>
+</ul>
+</li>
+<li>查找文件<ul>
+<li>which<ul>
+<li>作用：查找可执行程序</li>
+<li>原理：根据 PATH 环境变量，依次查找</li>
+<li>常用选项<ul>
+<li>-a</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>find<ul>
+<li>作用：在目录下，递归地查找文件</li>
+<li>格式：find [目录…]  查找条件</li>
+<li>查找条件<ul>
+<li>-name  通配符</li>
+<li>-type c<ul>
+<li>f: regular file</li>
+<li>d: directory</li>
+<li>p: named pipe</li>
+<li>c: character device</li>
+<li>b: block device</li>
+<li>l: symbolic link</li>
+<li>s: domain socket</li>
+</ul>
+</li>
+<li>-size  n[bcwkMG]<ul>
+<li>单位<ul>
+<li>b: block (默认)</li>
+<li>c: character</li>
+<li>w: word (2-bytes)</li>
+<li>k</li>
+<li>M</li>
+<li>G</li>
+</ul>
+</li>
+<li>-size 4M</li>
+<li>-size +4M</li>
+<li>-size -4M</li>
+</ul>
+</li>
+<li>-empty</li>
+<li>-user, -uid</li>
+<li>-group, -gid</li>
+<li>-perm  三个八进制数字</li>
+<li>时间<ul>
+<li>-atime, -amin</li>
+<li>-ctime, -cmin</li>
+<li>-mtime, -mmin<ul>
+<li>-mtime  3</li>
+<li>-mtime +3</li>
+<li>-mtime -3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组合<ul>
+<li>-a (and)</li>
+<li>-o (or)</li>
+<li>! (not)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通配符<ul>
+<li>*: 匹配任意多个字符 (包括0个)</li>
+<li>?: 匹配任意一个字符</li>
+<li>集合&#x2F;类<ul>
+<li>[abc]</li>
+<li>[!abc]</li>
+<li>[0-9a-zA-Z_]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其它<ul>
+<li>查看帮助手册<ul>
+<li>man<ul>
+<li>Tips: Be a MAN!</li>
+<li>格式：man [手册编号]  词条</li>
+<li>man手册<ul>
+<li>1:  shell命令</li>
+<li>2：系统调用</li>
+<li>3：库函数</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关机命令<ul>
+<li>shutdown<ul>
+<li>-P, –poweroff</li>
+<li>-r, –reboot</li>
+<li>-H, –halt</li>
+<li>-c (cancel)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>别名<ul>
+<li>alias<ul>
+<li>查看别名：alias</li>
+<li>设置别名：alias  cd&#x3D;’sudo rm -rf’</li>
+<li>bash的配置文件<ul>
+<li>~&#x2F;.bashrc<ul>
+<li>source ~&#x2F;.bashrc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+    <p><h4>版权所有 © 2024 | 作者: Libra | 主题 By <a class="theme-author" target="_blank" rel="noopener" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">本站浏览总访问量: <span id="busuanzi_value_site_pv"></span></span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">本站访问人数: <span id="busuanzi_value_site_uv"></span></span>
+    
+    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label>
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="">
+<input type="hidden" id="valine_appKey" value="">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
