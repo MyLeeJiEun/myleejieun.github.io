@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        leejieun
+    </title>
+    <meta name="description" content= 嘿，这里是leejieun～这是我的博客。欢迎访问！ >
+    <meta name="keywords" content= Blog,Hexo,Theme,leejieun >
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            Data structures and algorithms
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <ul>
+<li>数据结构和算法<ul>
+<li>数据结构<ul>
+<li>集合<ul>
+<li>哈希表<ul>
+<li>模型</li>
+<li>基本操作<ul>
+<li>添加<ul>
+<li>hashmap_put(map, key, val)</li>
+</ul>
+</li>
+<li>删除<ul>
+<li>hashmap_delete(map, key)</li>
+</ul>
+</li>
+<li>查找<ul>
+<li>hashmap_get(map, key)</li>
+</ul>
+</li>
+<li>遍历</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>哈希函数<ul>
+<li>数据的指纹<ul>
+<li>正向快速</li>
+<li>逆向困难</li>
+<li>平均分布</li>
+<li>哈希冲突的概率小</li>
+<li>对数据敏感</li>
+</ul>
+</li>
+<li>散列<ul>
+<li>正向快速</li>
+<li>平均分布</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>哈希桶<ul>
+<li>拉链法</li>
+<li>开放地址法<ul>
+<li>线性探测</li>
+<li>平方探测</li>
+<li>再散列法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>C++: unordered_map,  unordered_set</li>
+<li>Java: HashMap, HashSet</li>
+<li>redis<ul>
+<li>键值数据库</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线性结构<ul>
+<li>动态数组</li>
+<li>链表<ul>
+<li>单向链表<ul>
+<li>模型</li>
+<li>基本操作<ul>
+<li>增<ul>
+<li>在某个结点后面添加</li>
+</ul>
+</li>
+<li>删<ul>
+<li>在某个结点后面删除</li>
+</ul>
+</li>
+<li>查<ul>
+<li>根据索引查找值<ul>
+<li>平均遍历 n&#x2F;2 个结点</li>
+</ul>
+</li>
+<li>查找与特定值相等的结点<ul>
+<li>无序</li>
+<li>有序<ul>
+<li>记录上一次查找的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>遍历<ul>
+<li>正向遍历</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>C++: forward_list</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>双向链表<ul>
+<li>模型</li>
+<li>基本操作<ul>
+<li>增<ul>
+<li>在某个结点后面添加</li>
+<li>在某个结点前面添加</li>
+</ul>
+</li>
+<li>删<ul>
+<li>在某个结点后面删除</li>
+<li>在某个结点前面删除</li>
+<li>删除当前结点</li>
+</ul>
+</li>
+<li>查<ul>
+<li>根据索引查找值<ul>
+<li>平均遍历 n&#x2F;4 个结点</li>
+</ul>
+</li>
+<li>查找与特定值相等的结点<ul>
+<li>无序</li>
+<li>有序<ul>
+<li>记录上一次查找的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>遍历<ul>
+<li>正向遍历</li>
+<li>逆向遍历</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现</li>
+<li>应用<ul>
+<li>Java: LinkedList</li>
+<li>C++: list</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>栈<ul>
+<li>模型<ul>
+<li>操作受限的线性表，只能在一端添加或删除<ul>
+<li>LIFO</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本操作<ul>
+<li>入栈</li>
+<li>出栈</li>
+<li>查看栈顶元素</li>
+<li>判空</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>动态数组</li>
+<li>链表</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>LIFO<ul>
+<li>函数调用</li>
+<li>括号匹配</li>
+</ul>
+</li>
+<li>单调栈 (表示优先级)<ul>
+<li>表达式求值</li>
+</ul>
+</li>
+<li>记录轨迹<ul>
+<li>浏览器的前进后退功能</li>
+<li>深度优先搜索</li>
+<li>回溯</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列<ul>
+<li>模型<ul>
+<li>操作受限的线性表，在一端添加，在另一端删除<ul>
+<li>FIFO</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本操作<ul>
+<li>入队列</li>
+<li>出队列</li>
+<li>查看队头元素</li>
+<li>判空</li>
+<li>判满</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>动态数组 (循环数组)</li>
+<li>链表</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>缓冲区</li>
+<li>缓存<ul>
+<li>公平性</li>
+</ul>
+</li>
+<li>广度优先搜索<ul>
+<li>三度好友</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>树<ul>
+<li>BST<ul>
+<li>模型<ul>
+<li>key值能进行比较：L  &lt;  D  &lt; R</li>
+<li>左子树也是一棵二叉搜素树</li>
+<li>右子树也是一棵二叉搜素树</li>
+</ul>
+</li>
+<li>基本操作<ul>
+<li>添加</li>
+<li>删除</li>
+<li>查找</li>
+<li>遍历<ul>
+<li>深度优先遍历<ul>
+<li>先序遍历<ul>
+<li>D L R</li>
+</ul>
+</li>
+<li>中序遍历<ul>
+<li>L D R</li>
+</ul>
+</li>
+<li>后序遍历<ul>
+<li>L R D</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>广度优先遍历<ul>
+<li>层次遍历</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现</li>
+<li>作用<ul>
+<li>存储动态的有序数据</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>C++:  map, set</li>
+<li>Java: TreeMap, TreeSet</li>
+<li>epoll</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>图</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>排序<ul>
+<li>选择排序<ul>
+<li>时间：O(n^2)<ul>
+<li>对数据不敏感<ul>
+<li>比较：(n-1) + (n-2) + … + 1</li>
+<li>交换：n-1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(1)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>不稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>冒泡排序<ul>
+<li>时间<ul>
+<li>最好情况: O(n)<ul>
+<li>原数组有序<ul>
+<li>比较：n-1</li>
+<li>交换：0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>平均情况：O(n^2)<ul>
+<li>比较：大于等于交换的次数，小于等于 n(n-1)&#x2F;2</li>
+<li>交换：等于逆序对 n(n-1) &#x2F; 4</li>
+</ul>
+</li>
+<li>最坏情况：O(n^2)<ul>
+<li>原数组逆序<ul>
+<li>比较：1 + 2 + … + (n-1)</li>
+<li>交换：1 + 2 + … + (n-1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(1)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>插入排序<ul>
+<li>时间<ul>
+<li>最好情况: O(n)<ul>
+<li>原数组有序<ul>
+<li>比较：n-1</li>
+<li>交换：0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>平均情况：O(n^2)<ul>
+<li>比较：大于等于交换的次数，小于等于 n(n-1)&#x2F;2</li>
+<li>交换：等于逆序对 n(n-1) &#x2F; 4</li>
+</ul>
+</li>
+<li>最坏情况：O(n^2)<ul>
+<li>原数组逆序<ul>
+<li>比较：1 + 2 + … + (n-1)</li>
+<li>交换：1 + 2 + … + (n-1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(1)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>希尔排序<ul>
+<li>类比：多人轮流抓牌</li>
+<li>时间<ul>
+<li>和gap序列相关，一般来说小于 O(n^2)</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(1)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>不稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>归并排序<ul>
+<li>时间<ul>
+<li>对数据不敏感：O(nlogn)</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(n) + O(logn) &#x3D; O(n)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>快速排序<ul>
+<li>时间<ul>
+<li>最好情况：O(nlogn)<ul>
+<li>每次分区，基准值都位于中间</li>
+</ul>
+</li>
+<li>最坏情况：O(n^2)<ul>
+<li>每次分区，基准值都位于两端</li>
+</ul>
+</li>
+<li>平均情况：O(nlogn)</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(log n)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>不稳定</li>
+</ul>
+</li>
+<li>改进方法<ul>
+<li>基准值选取<ul>
+<li>随机选取</li>
+<li>选择3个或5个元素的中位数</li>
+</ul>
+</li>
+<li>如果相等的元素比较多<ul>
+<li>三向分区</li>
+</ul>
+</li>
+<li>当区间元素比较少时，比如小于64<ul>
+<li>插入排序</li>
+</ul>
+</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>堆排序<ul>
+<li>时间<ul>
+<li>对数据不敏感：O(nlogn)</li>
+</ul>
+</li>
+<li>空间<ul>
+<li>O(1)</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>不稳定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二分查找<ul>
+<li>前提<ul>
+<li>随机访问元素<ul>
+<li>底层数据结构是数组</li>
+</ul>
+</li>
+<li>有序<ul>
+<li>通过一次比较，可以丢掉一半区间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>递归 (了解)</li>
+<li>循环 (必须掌握)</li>
+</ul>
+</li>
+<li>二分查找的变种<ul>
+<li><ol>
+<li>查找第一个等于key值的元素</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>查找最后一个等于key值的元素</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>查找第一个大于等于key值的元素</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>查找最后一个小于key值的元素</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+    <p><h4>版权所有 © 2024 | 作者: Libra | 主题 By <a class="theme-author" target="_blank" rel="noopener" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">本站浏览总访问量: <span id="busuanzi_value_site_pv"></span></span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">本站访问人数: <span id="busuanzi_value_site_uv"></span></span>
+    
+    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label>
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="">
+<input type="hidden" id="valine_appKey" value="">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
