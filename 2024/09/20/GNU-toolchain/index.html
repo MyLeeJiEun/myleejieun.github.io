@@ -51,6 +51,125 @@
 </li>
 </ul>
 </li>
+<li>条件编译<ul>
+<li>在预处理阶段决定包含哪些代码片段，不包含哪些代码片段</li>
+<li>预处理指令<ul>
+<li>#if<ul>
+<li>运算符: defined</li>
+</ul>
+</li>
+<li>#ifdef</li>
+<li>#ifndef</li>
+</ul>
+</li>
+<li>作用<ul>
+<li>提高代码的可移植性</li>
+<li>给宏提供默认值</li>
+<li>避免头文件重复包含</li>
+<li>#if 0 代码片段  #endif<ul>
+<li>条件屏蔽</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>gdb<ul>
+<li>观念<ul>
+<li>调试代码是写代码难度的两倍</li>
+<li>程序报错的位置，很可能不是真正出错的位置</li>
+<li>调试的基本步骤<ul>
+<li>走一走</li>
+<li>停一停</li>
+<li>看一看<ul>
+<li>查看程序的状态</li>
+<li>你对程序的预期</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>命令<ul>
+<li>编译：加 -g</li>
+<li>进入调试界面<ul>
+<li>gdb  可执行程序</li>
+</ul>
+</li>
+<li>退出调试界面<ul>
+<li>quit &#x2F;  q</li>
+</ul>
+</li>
+<li>设置命令行参数<ul>
+<li>set args 其它的命令行参数</li>
+</ul>
+</li>
+<li>查看代码<ul>
+<li>layout src</li>
+<li>layout asm</li>
+<li>layout regs</li>
+<li>layout next</li>
+<li>layout prev</li>
+<li>refresh<ul>
+<li>刷新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>走一走<ul>
+<li>run &#x2F; r</li>
+<li>next &#x2F; n</li>
+<li>step &#x2F; s</li>
+<li>finish</li>
+<li>continue &#x2F; c</li>
+</ul>
+</li>
+<li>停一停<ul>
+<li>break &#x2F; b</li>
+<li>info break &#x2F; i b</li>
+<li>delete [NUM]</li>
+<li>ignore NUM  COUNT</li>
+</ul>
+</li>
+<li>看一看<ul>
+<li>print &#x2F; p<ul>
+<li>print 表达式</li>
+<li>print 表达式&#x3D;值</li>
+</ul>
+</li>
+<li>display<ul>
+<li>display 表达式</li>
+<li>info display</li>
+<li>undisplay [NUM]</li>
+</ul>
+</li>
+<li>info locals</li>
+<li>info args</li>
+<li>info registers</li>
+<li>bracktrace &#x2F; bt</li>
+<li>frame N</li>
+<li>x&#x2F;nfu<ul>
+<li>查看内存</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>查看 core 文件<ul>
+<li>程序崩溃时的内存快照<ul>
+<li>“黑匣子”</li>
+</ul>
+</li>
+<li>复现错误</li>
+<li>gdb  可执行程序  core文件<ul>
+<li>看一看</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
