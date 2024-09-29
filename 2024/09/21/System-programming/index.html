@@ -923,8 +923,513 @@
 </li>
 </ul>
 </li>
+<li>执行程序<ul>
+<li>execve<ul>
+<li>原理<ul>
+<li>清除进程的代码段、数据段、堆、栈…</li>
+<li>加载新的可执行程序，设置代码段和数据段</li>
+<li>从新的可执行程序main函数的第一行开始执行</li>
 </ul>
 </li>
+<li>参数<ul>
+<li>pathname<ul>
+<li>可执行程序的路径</li>
+</ul>
+</li>
+<li>char* argv[]<ul>
+<li>命令行参数<ul>
+<li>argv[0]: 可执行程序的名字</li>
+<li>以NULL结尾</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>char* envp[]<ul>
+<li>环境变量<ul>
+<li>以 NULL 结尾</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：不返回</li>
+<li>失败：-1，并设置 errno</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exec函数簇<ul>
+<li>l: list<ul>
+<li>命令行参数以可变长参数的形式指定</li>
+</ul>
+</li>
+<li>v: vector<ul>
+<li>命令行参数以数组的形式指定</li>
+</ul>
+</li>
+<li>e: environment<ul>
+<li>重新设置环境变量</li>
+</ul>
+</li>
+<li>p: PATH<ul>
+<li>根据PATH环境变量查找可执行程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>system<ul>
+<li>作用：执行任意的 shell 命令</li>
+<li>原理：fork()一个子进程，让子进程执行 “sh -c command”</li>
+<li>参数<ul>
+<li>command<ul>
+<li>要执行的命令</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>惯用法<ul>
+<li>fork()</li>
+<li>子进程执行新的可执行程序</li>
+<li>父进程等待子进程结束</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>IPC<ul>
+<li>管道<ul>
+<li>概念：内核管理的数据结构，用于进程之间通信</li>
+<li>特性<ul>
+<li>字节流<ul>
+<li>数据是没有边界的</li>
+<li>接收的顺序就是发送的顺序</li>
+<li>不能够用 lseek() 移动位置</li>
+</ul>
+</li>
+<li>半双工</li>
+<li>管道的容量是有限的<ul>
+<li>如果管道已经满了，写管道会引发阻塞</li>
+</ul>
+</li>
+<li>读管道<ul>
+<li>如果管道里面没有数据，读管道会引发阻塞</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pipe<ul>
+<li>作用：创建管道</li>
+<li>参数<ul>
+<li>int fields[2]<ul>
+<li>传出参数：fields[0]会关联到管道的读端；fields[1]会关联到管道的写端</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：0</li>
+<li>失败：-1，并设置errno</li>
+</ul>
+</li>
+<li>惯用法<ul>
+<li>先 pipe</li>
+<li>再 fork</li>
+<li>父进程关闭管道的一端；子进程关闭管道的另一端</li>
+</ul>
+</li>
+<li>限制<ul>
+<li>只能用于相关进程之间通信，往往是父子进程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fifo<ul>
+<li>作用：创建有名管道 (fifo)</li>
+<li>命令：mkfifo [-m mode] 名字</li>
+<li>mkfifo<ul>
+<li>参数<ul>
+<li>pathname</li>
+<li>mode</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：0</li>
+<li>失败：-1，并设置errno</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用于任意两个进程之间通信</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>信号 (signal)<ul>
+<li>异步的事件通知机制。是进程感知外部世界的一种很重要的方式。</li>
+<li>特征<ul>
+<li>异步<ul>
+<li>进程不知道什么时候会收到信号，但一旦收到信号，会立刻响应信号。</li>
+</ul>
+</li>
+<li>不稳定<ul>
+<li>处于 pending 状态的信号，可能发生丢失</li>
+</ul>
+</li>
+<li>语义不明确<ul>
+<li>不同操作系统信号的语义不尽相同</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事件源<ul>
+<li>用户<ul>
+<li>ctrl + c<ul>
+<li>SIGINT</li>
+</ul>
+</li>
+<li>ctrl + z<ul>
+<li>SIGTSTP</li>
+</ul>
+</li>
+<li>ctrl + \<ul>
+<li>SIGQUIT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>硬件<ul>
+<li>执行了非法的指令<ul>
+<li>SIGILL</li>
+</ul>
+</li>
+<li>访问非法的内容<ul>
+<li>SIGSEGV</li>
+</ul>
+</li>
+<li>除0异常<ul>
+<li>SIGFPE</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>软件<ul>
+<li>子进程的状态发生修改<ul>
+<li>SIGCHLD</li>
+</ul>
+</li>
+<li>写破损的管道<ul>
+<li>SIGPIPE</li>
+</ul>
+</li>
+<li>调用 abort()<ul>
+<li>SIGABRT</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>信号的执行流程</li>
+<li>响应信号<ul>
+<li>默认处置<ul>
+<li>Term</li>
+<li>Core</li>
+<li>Stop</li>
+<li>Cont</li>
+<li>Ign</li>
+</ul>
+</li>
+<li>自行处置<ul>
+<li>注册信号处理函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API<ul>
+<li>注册信号处理函数<ul>
+<li>signal<ul>
+<li>参数<ul>
+<li>signo</li>
+<li>handler<ul>
+<li>typedef void (*sighandler_t) (int)<ul>
+<li>SIG_DFL</li>
+<li>SIG_IGN</li>
+<li>自定义处理函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：旧的信号处理函数</li>
+<li>失败：SIG_ERR</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发送信号<ul>
+<li>kill<ul>
+<li>参数<ul>
+<li>pid<ul>
+<li><blockquote>
+<p>0: 给进程ID为pid的进程发送信号</p>
+</blockquote>
+</li>
+<li>&#x3D;0: 给同进程组的进程发送信号</li>
+<li>&#x3D;-1：给权限允许的所有进程发送信号</li>
+<li>&lt;-1: 给进程组 id 为 |pid| 的进程发送信号</li>
+</ul>
+</li>
+<li>signo</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功 (至少发送了一次信号)：0</li>
+<li>失败：-1，并设置 errno</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>raise<ul>
+<li>kill(getpid(), signo)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>套接字 (socket)</li>
+<li>共享内存 + 信号量 (semaphor)</li>
+<li>消息队列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>I&#x2F;O多路复用<ul>
+<li>最佳实践：一个执行流程最多只能有一个阻塞点</li>
+<li>作用：同步的I&#x2F;O事件监听机制</li>
+<li>API<ul>
+<li>select<ul>
+<li>参数<ul>
+<li>nfds<ul>
+<li>监听的最大文件描述符 + 1</li>
+</ul>
+</li>
+<li>readfds<ul>
+<li>传入：要监听读事件的文件描述符集合</li>
+<li>传出：读事件已就绪的文件描述符集合</li>
+</ul>
+</li>
+<li>writefds<ul>
+<li>传入：要监听写事件的文件描述符集合</li>
+<li>传出：写事件已就绪的文件描述符集合</li>
+</ul>
+</li>
+<li>exceptfds<ul>
+<li>传入：要监听看异常事件的文件描述符集合</li>
+<li>传出：异常事件已就绪的文件描述符集合</li>
+</ul>
+</li>
+<li>timeout<ul>
+<li>传入：超时时间</li>
+<li>传出：剩余的时间</li>
+<li>NULL: 一直阻塞</li>
+<li>{0, 0}：不阻塞</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功<ul>
+<li>返回就绪的 I&#x2F;O 事件个数；如果超时，返回0</li>
+</ul>
+</li>
+<li>失败<ul>
+<li>-1，并设置errno</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺陷<ul>
+<li><ol>
+<li>监听的文件描述符个数是受限的</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>轮询fd_set，已判断哪些文件描述符就绪</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>poll</li>
+<li>epoll</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>线程<ul>
+<li>什么是线程<ul>
+<li>进程的一条执行流程，它是CPU调度的最小单位</li>
+</ul>
+</li>
+<li>为什么引入线程<ul>
+<li>相对进程而言，线程是轻量级的</li>
+<li>进程之间通信需要打破隔离的壁障，线程之间通信的代价几乎没有</li>
+<li>线程之间切换，不会导致 CPU 高速缓存和 TLB 的失效</li>
+</ul>
+</li>
+<li>API<ul>
+<li>基本操作 (控制原语)<ul>
+<li>获取线程的标识<ul>
+<li>pthread_self</li>
+</ul>
+</li>
+<li>创建线程<ul>
+<li>pthread_create<ul>
+<li>参数<ul>
+<li>tid: 传出参数，用来接收新线程的 ID</li>
+<li>attr: 线程的属性，一般填NULL，表示采用默认属性</li>
+<li>void* (<em>start_routine) (void</em>):  线程的入口函数</li>
+<li>arg: 线程入口函数的实参</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：0</li>
+<li>失败：返回错误码，不设置errno</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>终止线程<ul>
+<li>进程终止，会导致该进程的所有线程终止</li>
+<li>从线程入口函数返回</li>
+<li>调用 pthread_exit()</li>
+<li>响应 pthread_cancel()</li>
+</ul>
+</li>
+<li>退出线程<ul>
+<li>pthread_exit<ul>
+<li>参数<ul>
+<li>void* retval</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>连接线程<ul>
+<li>pthread_join<ul>
+<li>参数<ul>
+<li>tid</li>
+<li>void** retval<ul>
+<li>传出参数，用来接收线程的返回值<ul>
+<li>如果线程是因为响应取消请求而终止，线程会返回 PTHREAD_CANCELLED</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值<ul>
+<li>成功：0</li>
+<li>失败：返回错误码，不设置errno</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分离线程<ul>
+<li>pthread_detach<ul>
+<li>参数<ul>
+<li>tid</li>
+</ul>
+</li>
+<li>处于游离态的进程不可以被 join, 也不能重新恢复到 joinable 状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发送取消请求<ul>
+<li>pthread_cancel<ul>
+<li>参数<ul>
+<li>tid: 目标线程</li>
+</ul>
+</li>
+<li>目标线程是否响应取消请求，以及何时响应<ul>
+<li>取消状态<ul>
+<li>ENABLE (默认)</li>
+<li>DISABLE</li>
+</ul>
+</li>
+<li>取消类型<ul>
+<li>DEFFERED (默认)<ul>
+<li>取消点</li>
+</ul>
+</li>
+<li>ASYNCHROUNS<ul>
+<li>任意时候</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>清理线程<ul>
+<li>线程的清理函数栈<ul>
+<li>pthead_cleanup_push<ul>
+<li>参数<ul>
+<li>void (<em>routine) (void</em>)</li>
+<li>void* arg</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pthread_cleanup_pop<ul>
+<li>参数<ul>
+<li>execute<ul>
+<li>0: 不执行</li>
+<li>非0：执行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行时机<ul>
+<li>响应取消请求</li>
+<li>调用 pthread_exit()</li>
+<li>调用 pthread_cleanup_pop(非0)</li>
+<li>注意：从线程入口函数返回，不执行！</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同步</li>
 </ul>
 </li>
 </ul>
