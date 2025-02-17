@@ -14,7 +14,7 @@
 <meta property="og:description" content="some tips:使用const修饰符在大部分情况下对程序的性能并没有提升,编译器会对两种写法进行相似的优化，最后生成几乎相同的汇编代码（clang会生成相似的IR） 使用 const 修饰符在 C&#x2F;C++ 等编程语言中，通常被认为是一种良好的编程实践，因为它可以提高代码的可读性和可维护性，同时帮助开发者避免一些常见的错误。然而，关于 const 对程序性能的影响，存在一些误解。以下是">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-09-08T10:16:37.691Z">
-<meta property="article:modified_time" content="2025-02-15T09:42:50.358Z">
+<meta property="article:modified_time" content="2025-02-17T10:38:07.003Z">
 <meta property="article:author" content="Libra">
 <meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
@@ -151,11 +151,6 @@
 
 
       
-    <div class="article-category">
-        <i class="fa-solid fa-archive"></i>
-        <a class="category-link" href="/categories/Other/">Other</a>
-    </div>
-
 
       
     <div class="article-tag">
@@ -182,10 +177,13 @@
 <li><strong>内存访问</strong>：对于 <code>const</code> 修饰的全局变量或静态变量，编译器可能会将其放置在只读内存段（如 <code>.rodata</code> 段），这可以防止程序意外修改这些变量。然而，这种内存布局的变化对性能的影响通常可以忽略不计。</li>
 </ul>
 <h3 id="3-const-在特定场景下的性能影响"><a href="#3-const-在特定场景下的性能影响" class="headerlink" title="3. const 在特定场景下的性能影响"></a>3. <strong><code>const</code> 在特定场景下的性能影响</strong></h3><ul>
-<li>**函数参数中的 <code>const</code>**：在函数参数中使用 <code>const</code> 修饰指针或引用时，通常不会对性能产生直接影响。例如：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* ptr)</span></span>;</span><br></pre></td></tr></table></figure>
+<li><p>**函数参数中的 <code>const</code>**：在函数参数中使用 <code>const</code> 修饰指针或引用时，通常不会对性能产生直接影响。例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* ptr)</span></span>;</span><br></pre></td></tr></table></figure>
 
-这里的 <code>const</code> 只是告诉编译器 <code>ptr</code> 指向的内容不会被修改，但并不会影响函数调用的性能。</li>
-<li><strong><code>const</code> 成员函数</strong>：在 C++ 中，<code>const</code> 成员函数表示该函数不会修改类的成员变量。这可以帮助编译器进行一些优化，例如在某些情况下避免不必要的内存访问。然而，这种优化通常是非常细微的，对整体性能的影响有限。</li>
+<p>这里的 <code>const</code> 只是告诉编译器 <code>ptr</code> 指向的内容不会被修改，但并不会影响函数调用的性能。</p>
+</li>
+<li><p><strong><code>const</code> 成员函数</strong>：在 C++ 中，<code>const</code> 成员函数表示该函数不会修改类的成员变量。这可以帮助编译器进行一些优化，例如在某些情况下避免不必要的内存访问。然而，这种优化通常是非常细微的，对整体性能的影响有限。</p>
+</li>
 </ul>
 <h3 id="4-const-与编译器优化的关系"><a href="#4-const-与编译器优化的关系" class="headerlink" title="4. const 与编译器优化的关系"></a>4. <strong><code>const</code> 与编译器优化的关系</strong></h3><ul>
 <li><strong>常量传播（Constant Propagation）</strong>：编译器可以通过常量传播优化，将 <code>const</code> 变量的值直接替换到使用该变量的地方，从而减少内存访问次数。这种优化不仅适用于 <code>const</code> 变量，也适用于其他常量表达式。</li>
