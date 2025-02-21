@@ -8,8 +8,14 @@
       <link href="/2025/02/18/Interview-250218/"/>
       <url>/2025/02/18/Interview-250218/</url>
       
-        <content type="html"><![CDATA[<h3 id="1-线程池"><a href="#1-线程池" class="headerlink" title="1. 线程池"></a>1. 线程池</h3><ul><li>生产者消费者</li><li>任务队列</li><li>互斥访问临界资源</li><li>互斥锁</li><li>条件变量</li></ul><h3 id="2-死锁"><a href="#2-死锁" class="headerlink" title="2. 死锁"></a>2. 死锁</h3><h4 id="死锁的排查"><a href="#死锁的排查" class="headerlink" title="* 死锁的排查"></a>* 死锁的排查</h4><ul><li>查看进程CPU利用率，内存利用率(先使用命令ps aux | grep 获取进程的进程号， 然后查看cpu,内存使用率top -Hp [进程号])</li><li>若发现进程所占用的CPU和内存资源都很低,则是有可能发生的死锁，进而导致阻塞</li><li>此时若是在生产环境下，则可尝试查看日志，使用gdb attach “进程号”(要切换到root用户下执行)</li><li>thread apply all bt</li><li>info threads</li><li>thread 线程号</li><li>bt</li></ul><h3 id="3-迭代器失效"><a href="#3-迭代器失效" class="headerlink" title="3. 迭代器失效"></a>3. 迭代器失效</h3><ul><li>对容器进行插入，删除操作时可能会导致迭代器的失效</li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-线程池"><a href="#1-线程池" class="headerlink" title="1. 线程池"></a>1. 线程池</h3><ul><li>生产者消费者</li><li>任务队列</li><li>互斥访问临界资源</li><li>互斥锁</li><li>条件变量</li></ul><h3 id="2-死锁"><a href="#2-死锁" class="headerlink" title="2. 死锁"></a>2. 死锁</h3><h4 id="死锁的排查"><a href="#死锁的排查" class="headerlink" title="* 死锁的排查"></a>* 死锁的排查</h4><ul><li>查看进程CPU利用率，内存利用率(先使用命令ps aux | grep 获取进程的进程号， 然后查看cpu,内存使用率top -Hp [进程号])</li><li>若发现进程所占用的CPU和内存资源都很低,则是有可能发生的死锁，进而导致阻塞</li><li>此时若是在生产环境下，则可尝试查看日志，使用gdb attach “进程号”(要切换到root用户下执行)</li><li>thread apply all bt</li><li>info threads</li><li>thread 线程号</li><li>bt</li></ul><h3 id="3-迭代器失效"><a href="#3-迭代器失效" class="headerlink" title="3. 迭代器失效"></a>3. 迭代器失效</h3><ul><li>对容器进行插入(扩容)，删除操作时可能会导致迭代器的失效</li></ul>]]></content>
       
+      
+      <categories>
+          
+          <category> Interview </category>
+          
+      </categories>
       
       
     </entry>

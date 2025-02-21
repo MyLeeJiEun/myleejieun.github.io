@@ -14,7 +14,7 @@
 <meta property="og:description" content="1. 线程池 生产者消费者 任务队列 互斥访问临界资源 互斥锁 条件变量  2. 死锁* 死锁的排查 查看进程CPU利用率，内存利用率(先使用命令ps aux | grep 获取进程的进程号， 然后查看cpu,内存使用率top -Hp [进程号]) 若发现进程所占用的CPU和内存资源都很低,则是有可能发生的死锁，进而导致阻塞 此时若是在生产环境下，则可尝试查看日志，使用gdb attach “进程">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-02-18T08:36:16.000Z">
-<meta property="article:modified_time" content="2025-02-19T14:20:43.010Z">
+<meta property="article:modified_time" content="2025-02-21T02:59:03.864Z">
 <meta property="article:author" content="Libra">
 <meta name="twitter:card" content="summary">
     
@@ -148,6 +148,11 @@
 
 
       
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Interview/">Interview</a>
+    </div>
+
 
       
 
@@ -173,7 +178,7 @@
 <li>bt</li>
 </ul>
 <h3 id="3-迭代器失效"><a href="#3-迭代器失效" class="headerlink" title="3. 迭代器失效"></a>3. 迭代器失效</h3><ul>
-<li>对容器进行插入，删除操作时可能会导致迭代器的失效</li>
+<li>对容器进行插入(扩容)，删除操作时可能会导致迭代器的失效</li>
 </ul>
 
   </div>
