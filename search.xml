@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>Q&amp;A</title>
-      <link href="/2025/02/25/Q-A/"/>
-      <url>/2025/02/25/Q-A/</url>
-      
-        <content type="html"><![CDATA[<h3 id="东软鸿蒙外包"><a href="#东软鸿蒙外包" class="headerlink" title="东软鸿蒙外包"></a>东软鸿蒙外包</h3><p>自我介绍</p><p><strong>Q：问用Valgrind来做过什么</strong></p><p>A：Valgrind是一个工具集合，自己用的比较多是Memcheck（追问还用过什么)，答还知道Callgrind,其他的不了解</p><p><strong>Q：问了一下我什么时候毕业，和简历上的空白期</strong></p><p>A：跟他解释了一下</p><p><strong>Q：问了io_uring</strong></p><p>A：简单讲了一下自己所知道的关于io_uring</p><p><strong>Q：这里又突然问了一下平时在什么时候用到Valgrind</strong><br>A：检查程序是否有内存泄漏，和在程序有内存问题的时候去排查</p><p><strong>Q：问了一下零拷贝</strong></p><p>A：详细讲了一下零拷贝（讲完之后他问我：你做过网卡的驱动？我说没有。他就问那我为什么了解这快的技术（疑惑，不是你问了我才答的吗) 说的是自己感兴趣去了解的)，然后说了一下零拷贝具体的系统调用sendfile(当时紧张忘了说send + mmap)</p><p><strong>Q：问了一下上一份工作离职的原因</strong></p><p>A：说了一下提前准备好的说辞</p><p><strong>Q：问有没有做过终端设备的开发</strong></p><p>A：答的是没有，但有这方面的兴趣</p><p><strong>Q：问了一下在学校时候的成绩排名</strong></p><p>A：中间偏上</p><p><strong>Q：对自己编码能力的认知</strong></p><p>A：说了一下自己认为的优点和ia需要改进的方面</p><p><strong>Q：期望薪资</strong></p><p>A：</p><p><strong>Q：加班接受情况</strong></p><p>A:</p><p><strong>Q：后面又问了一下gcc 优化编译速度，包含头文件，引用外部库，编译优化</strong></p><p>A：包含头文件（-Idir) 引用外部库（-llibxx) 编译优化（-Ox,x可为0，1，2，3) 编译速度（说了一下make -j,后面面试结束后又想到还有ccahe)</p><p><strong>Q：问有没有做过UT开发</strong></p><p>A：听错了，以为是QT然后被打断了，然后问面试官UT的非缩写是什么（Unit Test)，然后说没有做过，然后说直接了解一点Google Test框架</p><p>面试结束</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Common interview questions</title>
       <link href="/2025/02/22/Common-interview-questions/"/>
       <url>/2025/02/22/Common-interview-questions/</url>
