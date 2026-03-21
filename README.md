@@ -1,6 +1,6 @@
-# Ubuntu Portfolio - Eve Liang
+# Ubuntu Portfolio - 温榆河
 
-A personal portfolio website with Ubuntu theme built with Angular, deployed at [https://everoot.github.io/](https://everoot.github.io/).
+A personal portfolio website with Ubuntu theme built with Angular, deployed at [https://myleejieun.github.io/](https://myleejieun.github.io/).
 
 A modern desktop environment simulator built with Angular 19, providing a complete Ubuntu desktop experience.
 

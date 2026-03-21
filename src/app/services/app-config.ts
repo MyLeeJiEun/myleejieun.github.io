@@ -19,7 +19,7 @@ export class AppConfigService {
   private apps: App[] = [
     {
       id: 'about',
-      title: 'About Eve',
+      title: 'About 温榆河',
       icon: '/assets/themes/Yaru/system/user-home.png',
       disabled: false,
       favourite: true,
@@ -65,7 +65,7 @@ export class AppConfigService {
       favourite: false,
       desktop_shortcut: true,
       isExternalApp: true,
-      url: 'https://github.com/Everoot',
+      url: 'https://github.com/myleejieun',
     },
     {
       id: 'settings',
@@ -107,7 +107,7 @@ export class AppConfigService {
       favourite: true,
       desktop_shortcut: true,
       isExternalApp: true,
-      url: 'https://everoot.github.io/Blog/',
+      url: 'https://myleejieun.github.io/blog',
     },
   ];
 

@@ -40,8 +40,8 @@ export class TerminalComponent implements OnInit, OnDestroy, AfterViewChecked {
   };
 
   fileSystem: { [key: string]: { type: 'file' | 'directory', content?: string } } = {
-    'resume.txt': { type: 'file', content: 'Eve Liang\nFull-Stack Software Engineer\nEmail: byleve2022@gmail.com\nGitHub: github.com/Everoot' },
-    'README.md': { type: 'file', content: 'Welcome to Eve Liang\'s Portfolio Terminal!\n\nAvailable Commands:\n- help          Show available commands\n- ls            List directory contents\n- cd <dir>      Change directory\n- cat <file>    Display file contents\n- clear         Clear terminal\n- pwd           Show current directory\n- whoami        Show user information\n- history       Show command history\n- man <cmd>     Show manual for command' },
+    'resume.txt': { type: 'file', content: '温榆河\nFull-Stack Software Engineer\nEmail: librazhao0032@gmail.com\nGitHub: github.com/myleejieun' },
+    'README.md': { type: 'file', content: 'Welcome to 温榆河\'s Portfolio Terminal!\n\nAvailable Commands:\n- help          Show available commands\n- ls            List directory contents\n- cd <dir>      Change directory\n- cat <file>    Display file contents\n- clear         Clear terminal\n- pwd           Show current directory\n- whoami        Show user information\n- history       Show command history\n- man <cmd>     Show manual for command' },
     '.git': { type: 'directory' },
     '.config': { type: 'directory' },
   };

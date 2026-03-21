@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactComponent {
   contact = {
-    email: 'byleve2022@gmail.com',
-    github: 'github.com/Everoot',
+    email: 'librazhao0032@gmail.com',
+    github: 'github.com/myleejieun',
     location: 'Philadelphia, PA'
   };
 }
