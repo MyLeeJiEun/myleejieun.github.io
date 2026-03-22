@@ -107,29 +107,27 @@
     @switch (activeScreen) {
       @case ('about') {
         <div class="w-full max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-12">
-          <!-- Avatar -->
           <div class="flex justify-center mb-8 md:mb-12">
-            <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white border-opacity-20">
-                <img class="w-full h-full object-cover" src="/assets/images/logos/avatar.png" alt="温榆河" onerror="this.style.display='none'">
+            <div class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-white border-opacity-20 flex items-center justify-center text-2xl md:text-4xl font-light text-gray-200 bg-white bg-opacity-5">
+              温榆河
             </div>
           </div>
           
-          <!-- Name and Title -->
           <div class="text-center mb-12 md:mb-16">
             <h1 class="text-2xl md:text-4xl font-light text-white mb-2">温榆河</h1>
-            <p class="text-base md:text-lg text-gray-300 font-light mb-6 md:mb-8">Full-Stack Software Engineer</p>
+            <p class="text-base md:text-lg text-gray-300 font-light mb-6 md:mb-8">开发者主页</p>
             <ul class="text-sm md:text-base text-gray-400 font-light space-y-2 list-none text-left max-w-2xl mx-auto">
               <li class="flex items-start">
                 <span class="text-white mr-3 mt-1.5">•</span>
-                <span class="flex-1">Interested in distributed systems, software engineering, AI/ML and system reliability.</span>
+                <span class="flex-1">专注于软件开发、工程实践与持续学习，这里会逐步整理我的项目、技能与个人记录。</span>
               </li>
               <li class="flex items-start">
                 <span class="text-white mr-3 mt-1.5">•</span>
-                <span class="flex-1">Passionate about building scalable applications, exploring new technologies, and contributing to open-source projects.</span>
+                <span class="flex-1">当前站点以 Ubuntu 桌面风格为基础，后续会继续补充更完整的经历、作品和技术沉淀。</span>
               </li>
               <li class="flex items-start">
                 <span class="text-white mr-3 mt-1.5">•</span>
-                <span class="flex-1">Enjoy reading technical blogs, attending tech conferences, and continuous learning.</span>
+                <span class="flex-1">如果你想交流项目、协作或工作机会，可以通过页面中的邮箱与 GitHub 联系我。</span>
               </li>
             </ul>
           </div>
@@ -137,121 +135,64 @@
       }
       @case ('education') {
         <div class="w-full max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-12">
-          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">Education</h2>
+          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">经历</h2>
           <div class="space-y-8 md:space-y-10">
             <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8 pb-6 md:pb-8">
-              <h3 class="text-lg md:text-xl font-medium text-white mb-2">Southern Methodist University</h3>
-              <p class="text-sm md:text-base text-gray-300 mb-1">Master of Science in Computer Science</p>
-              <p class="text-xs md:text-sm text-gray-500">2023 - 2024</p>
+              <h3 class="text-lg md:text-xl font-medium text-white mb-2">教育经历</h3>
+              <p class="text-sm md:text-base text-gray-300 mb-1">正在整理中，后续会补充学校、专业和阶段性学习经历。</p>
+              <p class="text-xs md:text-sm text-gray-500">待补充</p>
             </div>
             <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8 pb-6 md:pb-8">
-              <h3 class="text-lg md:text-xl font-medium text-white mb-2">Fujian Agriculture and Forestry University</h3>
-              <p class="text-sm md:text-base text-gray-300 mb-1">Bachelor of Science in Mathematics, Minor in Finance</p>
-              <p class="text-xs md:text-sm text-gray-500">2019 - 2022</p>
+              <h3 class="text-lg md:text-xl font-medium text-white mb-2">学习记录</h3>
+              <p class="text-sm md:text-base text-gray-300 mb-1">这里可以继续补充证书、课程、培训或自学方向。</p>
+              <p class="text-xs md:text-sm text-gray-500">持续更新</p>
             </div>
           </div>
         </div>
       }
       @case ('skills') {
         <div class="w-full max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
-          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">Technical Skills</h2>
+          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">技能</h2>
           <div class="space-y-10 md:space-y-12">
-            <!-- Programming Languages -->
             <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Programming Languages</h3>
+              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">当前方向</h3>
               <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Java</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">JavaScript</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">TypeScript</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Python</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">SQL</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">HTML</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">CSS</span>
+                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">前端开发</span>
+                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">交互界面实现</span>
+                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">个人项目整理</span>
               </div>
             </div>
-            
-            <!-- Frontend Frameworks -->
             <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Frontend Frameworks & Libraries</h3>
+              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">站点技术</h3>
               <div class="flex flex-wrap gap-2.5 md:gap-3">
                 <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Angular</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">React</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">RxJS</span>
+                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">TypeScript</span>
                 <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Tailwind CSS</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">ECharts</span>
               </div>
             </div>
-            
-            <!-- Backend & APIs -->
             <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Backend & APIs</h3>
-              <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Spring Boot</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Node.js</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">GraphQL</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">REST APIs</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">GraphQL-DGS</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Flask</span>
-              </div>
-            </div>
-            
-            <!-- Data & Messaging -->
-            <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Data & Messaging</h3>
-              <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Kafka</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">PostgreSQL</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">MySQL</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">MongoDB</span>
-              </div>
-            </div>
-            
-            <!-- Cloud & DevOps -->
-            <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Cloud & DevOps</h3>
-              <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">AWS</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Docker</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Kubernetes</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">CI/CD</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Jenkins</span>
-              </div>
-            </div>
-            
-            <!-- Tools & Others -->
-            <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">Tools & Others</h3>
-              <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Git</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">GitHub</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Jira</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Confluence</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Postman</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">VS Code</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">IntelliJ IDEA</span>
-              </div>
-            </div>
-            
-            <!-- AI/ML -->
-            <div>
-              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">AI/ML & Research</h3>
-              <div class="flex flex-wrap gap-2.5 md:gap-3">
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Machine Learning</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Deep Learning</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Computer Vision</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Clinical AI</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">NumPy</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Pandas</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">TensorFlow</span>
-                <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">PyTorch</span>
-              </div>
+              <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">后续补充</h3>
+              <ul class="list-none space-y-2 text-sm md:text-base text-gray-300 font-light">
+                <li class="flex items-start">
+                  <span class="text-white mr-3 mt-1">•</span>
+                  <span class="flex-1">可以继续补充常用语言、框架、工具链和部署经验。</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-white mr-3 mt-1">•</span>
+                  <span class="flex-1">建议保留最能代表你的技术栈，而不是把所有工具都列出来。</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-white mr-3 mt-1">•</span>
+                  <span class="flex-1">当内容准备充分后，这一栏可以进一步改成更具体的技能清单。</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       }
       @case ('projects') {
         <div class="w-full max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
-          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">Projects</h2>
+          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">项目</h2>
           <div class="space-y-6 md:space-y-8">
             @for (project of projects; track project.name) {
               <div class="bg-ub-cool-grey bg-opacity-50 p-6 md:p-8 rounded-lg">
@@ -268,7 +209,7 @@
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-xs md:text-sm text-gray-400 mb-3 font-light uppercase tracking-wider">Impact</h4>
+                  <h4 class="text-xs md:text-sm text-gray-400 mb-3 font-light uppercase tracking-wider">说明</h4>
                   <ul class="list-none space-y-2">
                     @for (item of project.impact; track item) {
                       <li class="flex items-start">
@@ -285,17 +226,15 @@
       }
       @case ('contact') {
         <div class="w-full max-w-3xl mx-auto px-4 md:px-8 py-8 md:py-12">
-          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12 text-center">Contact</h2>
+          <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12 text-center">联系</h2>
           <div class="space-y-8 md:space-y-10">
-            <!-- Email -->
             <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
-              <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">Email</p>
+              <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">邮箱</p>
               <a href="mailto:librazhao0032@gmail.com" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
                 librazhao0032@gmail.com
               </a>
             </div>
             
-            <!-- GitHub -->
             <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
               <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">GitHub</p>
               <a href="https://github.com/myleejieun" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
@@ -303,21 +242,20 @@
               </a>
             </div>
             
-            <!-- Available for -->
             <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8 pt-2">
-              <p class="text-xs md:text-sm text-gray-400 mb-4 font-light uppercase tracking-wider">Available for</p>
+              <p class="text-xs md:text-sm text-gray-400 mb-4 font-light uppercase tracking-wider">说明</p>
               <ul class="list-none space-y-2">
                 <li class="flex items-start">
                   <span class="text-white mr-3 mt-1">•</span>
-                  <span class="text-sm md:text-base text-gray-300 flex-1">PhD program applications</span>
+                  <span class="text-sm md:text-base text-gray-300 flex-1">欢迎通过邮箱联系交流。</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-white mr-3 mt-1">•</span>
-                  <span class="text-sm md:text-base text-gray-300 flex-1">Research collaborations</span>
+                  <span class="text-sm md:text-base text-gray-300 flex-1">GitHub 会持续更新个人项目与站点代码。</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-white mr-3 mt-1">•</span>
-                  <span class="text-sm md:text-base text-gray-300 flex-1">Software engineering opportunities</span>
+                  <span class="text-sm md:text-base text-gray-300 flex-1">后续可以继续补充博客、简历下载或其他社交链接。</span>
                 </li>
               </ul>
             </div>

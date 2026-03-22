@@ -11,6 +11,6 @@ export class ContactComponent {
   contact = {
     email: 'librazhao0032@gmail.com',
     github: 'github.com/myleejieun',
-    location: 'Philadelphia, PA'
+    location: '待补充'
   };
 }

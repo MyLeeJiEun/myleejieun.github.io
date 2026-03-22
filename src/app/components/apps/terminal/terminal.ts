@@ -34,14 +34,14 @@ export class TerminalComponent implements OnInit, OnDestroy, AfterViewChecked {
   childDirectories: { [key: string]: string[] } = {
     root: ['about', 'projects', 'skills', 'contact', 'resume.txt', 'README.md', '.git', '.config'],
     about: [],
-    projects: ['agent-experience', 'oculomics-ai', 'housing-management', 'portfolio', 'ubuntu-portfolio'],
+    projects: ['project-template-1', 'project-template-2'],
     skills: [],
     contact: [],
   };
 
   fileSystem: { [key: string]: { type: 'file' | 'directory', content?: string } } = {
     'resume.txt': { type: 'file', content: '温榆河\nFull-Stack Software Engineer\nEmail: librazhao0032@gmail.com\nGitHub: github.com/myleejieun' },
-    'README.md': { type: 'file', content: 'Welcome to 温榆河\'s Portfolio Terminal!\n\nAvailable Commands:\n- help          Show available commands\n- ls            List directory contents\n- cd <dir>      Change directory\n- cat <file>    Display file contents\n- clear         Clear terminal\n- pwd           Show current directory\n- whoami        Show user information\n- history       Show command history\n- man <cmd>     Show manual for command' },
+    'README.md': { type: 'file', content: '欢迎来到温榆河的主页终端。\n\n这里会逐步整理个人项目、技能与站点说明。\n\n常用命令：\n- help          查看命令列表\n- ls            查看目录内容\n- cd <dir>      切换目录\n- cat <file>    查看文件内容\n- clear         清空终端\n- pwd           查看当前路径' },
     '.git': { type: 'directory' },
     '.config': { type: 'directory' },
   };
