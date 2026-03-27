@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DesktopComponent } from './components/desktop/desktop';
+import { profileIdentity } from './content/profile-content';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,5 @@ import { DesktopComponent } from './components/desktop/desktop';
   styleUrl: './app.css'
 })
 export class App {
-  title = '温榆河 - 个人主页';
+  title = `${profileIdentity.name} - ${profileIdentity.title}`;
 }

@@ -8,29 +8,42 @@
           {{ contact.email }}
         </a>
       </div>
+
+      <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
+        <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">电话</p>
+        <a [href]="'tel:' + contact.phone" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
+          {{ contact.phone }}
+        </a>
+      </div>
+
+      <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
+        <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">博客</p>
+        <a [href]="contact.websiteUrl" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
+          {{ contact.websiteLabel }}
+        </a>
+      </div>
       
       <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
         <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">GitHub</p>
-        <a [href]="'https://' + contact.github" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
-          {{ contact.github }}
+        <a [href]="contact.githubUrl" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors text-base md:text-lg font-light block">
+          {{ contact.githubLabel }}
         </a>
+      </div>
+
+      <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8">
+        <p class="text-xs md:text-sm text-gray-400 mb-2 font-light uppercase tracking-wider">地区</p>
+        <p class="text-white text-base md:text-lg font-light block">{{ contact.location }}</p>
       </div>
       
       <div class="border-l-2 border-white border-opacity-20 pl-6 md:pl-8 pt-2">
         <p class="text-xs md:text-sm text-gray-400 mb-4 font-light uppercase tracking-wider">说明</p>
         <ul class="list-none space-y-2">
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="text-sm md:text-base text-gray-300 flex-1">欢迎通过邮箱联系交流。</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="text-sm md:text-base text-gray-300 flex-1">GitHub 会持续更新个人项目与站点代码。</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="text-sm md:text-base text-gray-300 flex-1">后续可以继续补充博客、简历下载或其他社交链接。</span>
-          </li>
+          @for (note of notes; track note) {
+            <li class="flex items-start">
+              <span class="text-white mr-3 mt-1">•</span>
+              <span class="text-sm md:text-base text-gray-300 flex-1">{{ note }}</span>
+            </li>
+          }
         </ul>
       </div>
     </div>

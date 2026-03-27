@@ -2,39 +2,26 @@
   <div class="w-full max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
     <h2 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">技能</h2>
     <div class="space-y-10 md:space-y-12">
-      <div>
-        <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">当前方向</h3>
-        <div class="flex flex-wrap gap-2.5 md:gap-3">
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">前端开发</span>
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">交互界面实现</span>
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">个人项目整理</span>
+      @for (group of skillGroups; track group.title) {
+        <div>
+          <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">{{ group.title }}</h3>
+          <div class="flex flex-wrap gap-2.5 md:gap-3 mb-4">
+            @for (item of group.items; track item) {
+              <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">{{ item }}</span>
+            }
+          </div>
+          @if (group.notes?.length) {
+            <ul class="list-none space-y-2 text-sm md:text-base text-gray-300 font-light">
+              @for (note of group.notes; track note) {
+                <li class="flex items-start">
+                  <span class="text-white mr-3 mt-1">•</span>
+                  <span class="flex-1">{{ note }}</span>
+                </li>
+              }
+            </ul>
+          }
         </div>
-      </div>
-      <div>
-        <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">站点技术</h3>
-        <div class="flex flex-wrap gap-2.5 md:gap-3">
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Angular</span>
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">TypeScript</span>
-          <span class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light hover:bg-opacity-15 transition-colors">Tailwind CSS</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-sm md:text-base text-gray-400 mb-5 font-light uppercase tracking-wider border-b border-white border-opacity-10 pb-2">后续补充</h3>
-        <ul class="list-none space-y-2 text-sm md:text-base text-gray-300 font-light">
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="flex-1">可以继续补充常用语言、框架、工具链和部署经验。</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="flex-1">建议保留最能代表你的技术栈，而不是把所有工具都列出来。</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-white mr-3 mt-1">•</span>
-            <span class="flex-1">当内容准备充分后，这一栏可以进一步改成更具体的技能清单。</span>
-          </li>
-        </ul>
-      </div>
+      }
     </div>
   </div>
 </div>

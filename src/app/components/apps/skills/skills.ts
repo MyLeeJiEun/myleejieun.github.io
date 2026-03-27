@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { skillGroups } from '../../../content/profile-content';
 
 @Component({
   selector: 'app-skills',
   imports: [CommonModule],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SkillsComponent {
-  // This component now matches the Skills section in About me
+  readonly skillGroups = skillGroups;
 }

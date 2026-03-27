@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { profileIdentity } from '../content/profile-content';
 
 export interface App {
   id: string;
@@ -19,7 +20,7 @@ export class AppConfigService {
   private apps: App[] = [
     {
       id: 'about',
-      title: 'About 温榆河',
+      title: `About ${profileIdentity.name}`,
       icon: '/assets/themes/Yaru/system/user-home.png',
       disabled: false,
       favourite: true,
@@ -102,12 +103,12 @@ export class AppConfigService {
     {
       id: 'blog',
       title: 'Blog',
-      icon: '/assets/images/logos/avatar.png',
+      icon: '/assets/images/logos/zhaojinmai.png',
       disabled: false,
       favourite: true,
       desktop_shortcut: true,
       isExternalApp: true,
-      url: 'https://myleejieun.github.io/blog',
+      url: profileIdentity.websiteUrl,
     },
   ];
 

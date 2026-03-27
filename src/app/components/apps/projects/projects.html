@@ -1,27 +1,38 @@
-<div class="w-full h-full bg-ub-grey text-white p-6 overflow-y-auto">
-  <h1 class="text-2xl font-bold mb-6">Projects</h1>
-  <div class="space-y-6">
+<div class="w-full h-full bg-ub-grey text-white overflow-y-auto windowMainScreen">
+  <div class="w-full max-w-5xl mx-auto px-4 md:px-8 py-8 md:py-12">
+    <h1 class="text-xl md:text-2xl font-light text-white mb-8 md:mb-12">项目经历</h1>
+    <div class="space-y-6 md:space-y-8">
     @for (project of projects; track project.name) {
-      <div class="bg-ub-cool-grey p-6 rounded-lg">
-        <h2 class="text-xl font-bold mb-2">{{ project.name }}</h2>
-        <p class="mb-4">{{ project.description }}</p>
-        <div class="mb-4">
-          <h3 class="font-bold mb-2">Technologies:</h3>
-          <div class="flex flex-wrap gap-2">
+      <div class="bg-ub-cool-grey bg-opacity-50 p-6 md:p-8 rounded-lg">
+        <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between mb-4">
+          <div>
+            <h2 class="text-lg md:text-xl font-medium text-white">{{ project.name }}</h2>
+            <p class="text-xs md:text-sm text-gray-400 mt-1">{{ project.company }} · {{ project.role }}</p>
+          </div>
+          <span class="text-xs md:text-sm text-gray-500">{{ project.period }}</span>
+        </div>
+        <p class="text-sm md:text-base text-gray-300 mb-5 leading-relaxed">{{ project.description }}</p>
+        <div class="mb-5">
+          <h3 class="text-xs md:text-sm text-gray-400 mb-3 font-light uppercase tracking-wider">Technologies</h3>
+          <div class="flex flex-wrap gap-2 md:gap-3">
             @for (tech of project.technologies; track tech) {
-              <span class="px-3 py-1 bg-ub-orange rounded text-sm">{{ tech }}</span>
+              <span class="px-3 py-1.5 bg-white bg-opacity-10 text-white rounded-md text-xs md:text-sm font-light">{{ tech }}</span>
             }
           </div>
         </div>
         <div>
-          <h3 class="font-bold mb-2">Impact:</h3>
-          <ul class="list-disc list-inside space-y-1">
-            @for (item of project.impact; track item) {
-              <li>{{ item }}</li>
+          <h3 class="text-xs md:text-sm text-gray-400 mb-3 font-light uppercase tracking-wider">Highlights</h3>
+          <ul class="list-none space-y-2">
+            @for (item of project.highlights; track item) {
+              <li class="flex items-start">
+                <span class="text-white mr-3 mt-1">•</span>
+                <span class="text-sm md:text-base text-gray-300 flex-1">{{ item }}</span>
+              </li>
             }
           </ul>
         </div>
       </div>
     }
+    </div>
   </div>
 </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WindowManagerService } from '../../../services/window-manager';
 import { AppConfigService } from '../../../services/app-config';
+import { terminalFiles } from '../../../content/profile-content';
 
 interface TerminalRow {
   id: number;
@@ -34,14 +35,19 @@ export class TerminalComponent implements OnInit, OnDestroy, AfterViewChecked {
   childDirectories: { [key: string]: string[] } = {
     root: ['about', 'projects', 'skills', 'contact', 'resume.txt', 'README.md', '.git', '.config'],
     about: [],
-    projects: ['project-template-1', 'project-template-2'],
+    projects: ['erp-system', 'search-module', 'openharmony-dm', 'arkui-x', 'qt-android'],
+    'erp-system': [],
+    'search-module': [],
+    'openharmony-dm': [],
+    'arkui-x': [],
+    'qt-android': [],
     skills: [],
     contact: [],
   };
 
   fileSystem: { [key: string]: { type: 'file' | 'directory', content?: string } } = {
-    'resume.txt': { type: 'file', content: '温榆河\nFull-Stack Software Engineer\nEmail: librazhao0032@gmail.com\nGitHub: github.com/myleejieun' },
-    'README.md': { type: 'file', content: '欢迎来到温榆河的主页终端。\n\n这里会逐步整理个人项目、技能与站点说明。\n\n常用命令：\n- help          查看命令列表\n- ls            查看目录内容\n- cd <dir>      切换目录\n- cat <file>    查看文件内容\n- clear         清空终端\n- pwd           查看当前路径' },
+    'resume.txt': { type: 'file', content: terminalFiles.resume },
+    'README.md': { type: 'file', content: terminalFiles.readme },
     '.git': { type: 'directory' },
     '.config': { type: 'directory' },
   };
